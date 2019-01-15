@@ -13,10 +13,10 @@ jobs:
       - checkout
       - run: echo "A Deploy Job"
 workflows:
- version: 2
- my-workflow:
-   jobs:
-     - build
-     - deploy
+  version: 2
+  my-workflow:
+    jobs:
+      - build
+      - deploy
  
     
