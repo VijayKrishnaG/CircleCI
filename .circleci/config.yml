@@ -10,7 +10,7 @@ jobs:
           name: "Running Maven Build"
           command: mvn clean install 
       - persist_to_workspace:
-          root: ~/CircleCI
+          root: /root/CircleCI
           paths: target/
 ###################################################
   circleci-build:
