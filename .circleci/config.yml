@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/openjdk:8-jdk
+	working_directory: ~/CircleCI
     steps:
       - checkout
       - run:
@@ -15,7 +16,8 @@ jobs:
   circleci-build:
     docker:
       - image: circleci/openjdk:8-jdk
-    steps:
+    working_directory: ~/CircleCI
+	steps:
       - attach_workspace:
           at: ~/CircleCI
       - store_artifacts:
