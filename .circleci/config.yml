@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/openjdk:8-jdk
-	working_directory: ~/CircleCI
+    working_directory: ~/CirleCI
     steps:
       - checkout
       - run:
@@ -28,3 +28,5 @@ jobs:
     steps:
       - checkout
       - run: echo "A Deploy Job"
+ 
+    
