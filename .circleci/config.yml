@@ -9,17 +9,12 @@ jobs:
       - run:
           name: "Running Maven Build"
           command: mvn clean install 
-      - persist_to_workspace:
-          root: ~/CircleCI
-          paths: target/
 ###################################################
   circleci-build:
     docker:
       - image: circleci/openjdk:8-jdk
     working_directory: ~/CircleCI
     steps:
-      - attach_workspace:
-          at: ~/CircleCI
       - store_artifacts:
           path: ~/CircleCI/target/CircleCI-0.0.1-SNAPSHOT.jar	  
   deploy:
