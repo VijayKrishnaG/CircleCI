@@ -5,5 +5,18 @@ jobs:
       - image: circleci/openjdk:8-jdk
     steps:
       - checkout
-      - run: echo "Job 11"
+      - run: echo "A build Job"
+  deploy:
+    docker:
+      - image:circleci/openjdk:8-jdk
+    steps:
+      - checkout
+      - run: echo "A Deploy Job"
+workflows:
+ version: 2
+ my-workflow:
+   jobs:
+     - build
+     - deploy
+ 
     
